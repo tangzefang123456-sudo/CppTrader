@@ -156,6 +156,8 @@ LevelUpdate OrderBook::AddOrder(OrderNode* order_ptr)
 
 LevelUpdate OrderBook::ReduceOrder(OrderNode* order_ptr, uint64_t quantity, uint64_t hidden, uint64_t visible)
 {
+    bool top = (order_ptr->Level == (order_ptr->IsBuy() ? _best_bid : _best_ask));
+
     // Find the price level for the order
     LevelNode* level_ptr = order_ptr->Level;
 
@@ -183,11 +185,13 @@ LevelUpdate OrderBook::ReduceOrder(OrderNode* order_ptr, uint64_t quantity, uint
     }
 
     // Price level was changed. Return top of the book modification flag.
-    return LevelUpdate(update, level, ((order_ptr->Level == nullptr) || (order_ptr->Level == (order_ptr->IsBuy() ? _best_bid : _best_ask))));
+    return LevelUpdate(update, level, top);
 }
 
 LevelUpdate OrderBook::DeleteOrder(OrderNode* order_ptr)
 {
+    bool top = (order_ptr->Level == (order_ptr->IsBuy() ? _best_bid : _best_ask));
+    
     // Find the price level for the order
     LevelNode* level_ptr = order_ptr->Level;
 
@@ -212,7 +216,7 @@ LevelUpdate OrderBook::DeleteOrder(OrderNode* order_ptr)
     }
 
     // Price level was changed. Return top of the book modification flag.
-    return LevelUpdate(update, level, ((order_ptr->Level == nullptr) || (order_ptr->Level == (order_ptr->IsBuy() ? _best_bid : _best_ask))));
+    return LevelUpdate(update, level, top);
 }
 
 LevelNode* OrderBook::AddStopLevel(OrderNode* order_ptr)

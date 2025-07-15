@@ -574,6 +574,27 @@ void DeleteOrder(MarketManager& market, const std::string& command)
     std::cerr << "Invalid 'delete order' command: " << command << std::endl;
 }
 
+void ExecuteOrder(MarketManager& market, const std::string& command)
+{
+    static std::regex pattern("^execute order (\\d+) (\\d+) (\\d+)$");
+    std::smatch match;
+
+    if (std::regex_search(command, match, pattern))
+    {
+        uint64_t id = std::stoi(match[1]);
+        uint64_t price = std::stoi(match[2]);
+        uint64_t quantity = std::stoi(match[3]);
+
+        ErrorCode result = (price == 0) ? market.ExecuteOrder(id, quantity) : market.ExecuteOrder(id, price, quantity);
+        if (result != ErrorCode::OK)
+            std::cerr << "Failed 'execute order' command: " << result << std::endl;
+
+        return;
+    }
+
+    std::cerr << "Invalid 'execute order' command: " << command << std::endl;
+}
+
 int main(int argc, char** argv)
 {
     MyMarketHandler market_handler;
@@ -653,6 +674,8 @@ int main(int argc, char** argv)
             ReplaceOrder(market, line);
         else if (line.find("delete order") != std::string::npos)
             DeleteOrder(market, line);
+        else if (line.find("execute order") != std::string::npos)
+            ExecuteOrder(market, line);
         else
             std::cerr << "Unknown command: "  << line << std::endl;
     }
