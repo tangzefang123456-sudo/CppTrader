@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <CppTraderRoot>$(MSBuildThisFileDirectory)</CppTraderRoot>
+    <CppCommonRoot>$(CppTraderRoot)modules\cppcommon</CppCommonRoot>
+    <Catch2Root>$(CppTraderRoot)modules\Catch2</Catch2Root>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath>$(CppTraderRoot)include;$(CppCommonRoot)include;$(Catch2Root)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(CppTraderRoot)bin;$(CppCommonRoot)bin;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    <AdditionalDependencies>cpptrader.lib;cppcommon.lib;%(AdditionalDependencies)</AdditionalDependencies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    <AdditionalDependencies>cpptrader.lib;cppcommon.lib;%(AdditionalDependencies)</AdditionalDependencies>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <PlatformToolset>v143</PlatformToolset>
+    </ClCompile>
+    <Link>
+      <PlatformToolset>v143</PlatformToolset>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>
