@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExceptionCatcher", "ExceptionCatcher\ExceptionCatcher.vcxproj", "{1A2B3C4D-5E6F-7G8H-9I0J-1K2L3M4N5O6P}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestExceptionCatcher", "TestExceptionCatcher\TestExceptionCatcher.vcxproj", "{2B3C4D5E-6F7G-8H9I-0J1K-2L3M4N5O6P7Q}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A2B3C4D-5E6F-7G8H-9I0J-1K2L3M4N5O6P}.Debug|x64.ActiveCfg = Debug|x64
+		{1A2B3C4D-5E6F-7G8H-9I0J-1K2L3M4N5O6P}.Debug|x64.Build.0 = Debug|x64
+		{1A2B3C4D-5E6F-7G8H-9I0J-1K2L3M4N5O6P}.Release|x64.ActiveCfg = Release|x64
+		{1A2B3C4D-5E6F-7G8H-9I0J-1K2L3M4N5O6P}.Release|x64.Build.0 = Release|x64
+		{2B3C4D5E-6F7G-8H9I-0J1K-2L3M4N5O6P7Q}.Debug|x64.ActiveCfg = Debug|x64
+		{2B3C4D5E-6F7G-8H9I-0J1K-2L3M4N5O6P7Q}.Debug|x64.Build.0 = Debug|x64
+		{2B3C4D5E-6F7G-8H9I-0J1K-2L3M4N5O6P7Q}.Release|x64.ActiveCfg = Release|x64
+		{2B3C4D5E-6F7G-8H9I-0J1K-2L3M4N5O6P7Q}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C4D5E6F-7G8H-9I0J-1K2L-3M4N5O6P7Q8R}
+	EndGlobalSection
+EndGlobal
