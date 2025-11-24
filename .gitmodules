@@ -1,0 +1,6 @@
+[submodule "modules/CppCommon"]
+	path = modules/CppCommon
+	url = https://github.com/chronoxor/CppCommon.git
+[submodule "modules/CppBenchmark"]
+	path = modules/CppBenchmark
+	url = https://github.com/chronoxor/CppBenchmark.git
