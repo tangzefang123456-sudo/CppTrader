@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MarketDataCollector", "MarketDataCollector\MarketDataCollector.vcxproj", "{B16B0403-8165-47F1-9737-99C4F651077A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MarketDataProcessor", "MarketDataProcessor\MarketDataProcessor.vcxproj", "{CB9CF9BA-8A23-471D-A82F-239201AFB117}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TradingExecutor", "TradingExecutor\TradingExecutor.vcxproj", "{72CFC89E-BD24-44FE-9B52-7C5FBFF9736F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestMarketDataCollector", "TestMarketDataCollector\TestMarketDataCollector.vcxproj", "{369B8C94-D488-45B6-BAE4-51E22F406D75}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestMarketDataProcessor", "TestMarketDataProcessor\TestMarketDataProcessor.vcxproj", "{7A64BF3F-83D9-498D-8FA4-85EDD6963C10}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestTradingExecutor", "TestTradingExecutor\TestTradingExecutor.vcxproj", "{2CE7D401-6003-41B7-987F-FC0B910FC80B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B16B0403-8165-47F1-9737-99C4F651077A}.Debug|x64.ActiveCfg = Debug|x64
+		{B16B0403-8165-47F1-9737-99C4F651077A}.Debug|x64.Build.0 = Debug|x64
+		{B16B0403-8165-47F1-9737-99C4F651077A}.Release|x64.ActiveCfg = Release|x64
+		{B16B0403-8165-47F1-9737-99C4F651077A}.Release|x64.Build.0 = Release|x64
+		{CB9CF9BA-8A23-471D-A82F-239201AFB117}.Debug|x64.ActiveCfg = Debug|x64
+		{CB9CF9BA-8A23-471D-A82F-239201AFB117}.Debug|x64.Build.0 = Debug|x64
+		{CB9CF9BA-8A23-471D-A82F-239201AFB117}.Release|x64.ActiveCfg = Release|x64
+		{CB9CF9BA-8A23-471D-A82F-239201AFB117}.Release|x64.Build.0 = Release|x64
+		{72CFC89E-BD24-44FE-9B52-7C5FBFF9736F}.Debug|x64.ActiveCfg = Debug|x64
+		{72CFC89E-BD24-44FE-9B52-7C5FBFF9736F}.Debug|x64.Build.0 = Debug|x64
+		{72CFC89E-BD24-44FE-9B52-7C5FBFF9736F}.Release|x64.ActiveCfg = Release|x64
+		{72CFC89E-BD24-44FE-9B52-7C5FBFF9736F}.Release|x64.Build.0 = Release|x64
+		{369B8C94-D488-45B6-BAE4-51E22F406D75}.Debug|x64.ActiveCfg = Debug|x64
+		{369B8C94-D488-45B6-BAE4-51E22F406D75}.Debug|x64.Build.0 = Debug|x64
+		{369B8C94-D488-45B6-BAE4-51E22F406D75}.Release|x64.ActiveCfg = Release|x64
+		{369B8C94-D488-45B6-BAE4-51E22F406D75}.Release|x64.Build.0 = Release|x64
+		{7A64BF3F-83D9-498D-8FA4-85EDD6963C10}.Debug|x64.ActiveCfg = Debug|x64
+		{7A64BF3F-83D9-498D-8FA4-85EDD6963C10}.Debug|x64.Build.0 = Debug|x64
+		{7A64BF3F-83D9-498D-8FA4-85EDD6963C10}.Release|x64.ActiveCfg = Release|x64
+		{7A64BF3F-83D9-498D-8FA4-85EDD6963C10}.Release|x64.Build.0 = Release|x64
+		{2CE7D401-6003-41B7-987F-FC0B910FC80B}.Debug|x64.ActiveCfg = Debug|x64
+		{2CE7D401-6003-41B7-987F-FC0B910FC80B}.Debug|x64.Build.0 = Debug|x64
+		{2CE7D401-6003-41B7-987F-FC0B910FC80B}.Release|x64.ActiveCfg = Release|x64
+		{2CE7D401-6003-41B7-987F-FC0B910FC80B}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7G8H9I0J-1K2L-3M4N-5O6P-7Q8R9S0T1U2V}
+	EndGlobalSection
+EndGlobal
