@@ -12,18 +12,18 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Include directories
-include_directories(include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 # MemoryPool library
 add_library(MemoryPool STATIC
-    include/trader/common/memory_pool.h
-    source/trader/common/memory_pool.cpp
+    memory_pool.h
+    memory_pool.cpp
 )
 set_target_properties(MemoryPool PROPERTIES FOLDER "libraries")
 
 # MemoryPool tests
 add_executable(MemoryPoolTests
-    tests/test_memory_pool.cpp
+    test_memory_pool.cpp
 )
 target_link_libraries(MemoryPoolTests MemoryPool)
 set_target_properties(MemoryPoolTests PROPERTIES FOLDER "tests")
